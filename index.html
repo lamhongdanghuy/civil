@@ -6,20 +6,6 @@
     <title>Comprehensive Civil Engineering Learning Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Chosen Palette: Calm Neutral (Stone, Teal, Gray) -->
-    <!-- Application Structure Plan: This SPA is structured as a multi-section application, controlled by a main top navigation bar. It includes three primary sections: "Civil Engineering Overview" (providing a general introduction, disciplines, project lifecycle, and infrastructure stats), "IDOT Vocabulary" (a specialized 30-day vocabulary guide focused on IDOT-specific terms), and "General CE Vocabulary" (a new 30-day vocabulary guide covering broader civil engineering terms). Each vocabulary section features a dynamic sidebar for daily topic navigation and a search bar for quick lookups, using interactive flashcard-like elements. The overview section utilizes tabs for discipline-specific content and charts, and clickable flowchart steps for the project lifecycle. This integrated structure allows users to explore general CE concepts, delve into specific IDOT terminology, and broaden their general CE vocabulary, all within a single, intuitive interface. -->
-    <!-- Visualization & Content Choices:
-    - Civil Engineering Overview Section:
-        - Overview: Textual introduction. Goal: Inform. Viz/Presentation: Text. Interaction: None. Justification: Foundational.
-        - Disciplines: Text + Chart.js (Bar, Doughnut, Pie, Line) for material usage, foundation types, investment, water usage, waste management, project cost distribution. Goal: Inform, Compare, Change. Viz: Charts. Interaction: Tab click. Justification: Visualizes key aspects of each discipline.
-        - Project Lifecycle: HTML/CSS flowchart with clickable steps for details. Goal: Organize, Inform. Viz: HTML/CSS Flowchart. Interaction: Click step for details. Justification: Visualizes a process flow.
-        - Infrastructure Stats: Chart.js (Bar, Pie, Line) for bridge condition, road condition, water infrastructure age, transit ridership. Goal: Inform, Compare, Change. Viz: Charts. Interaction: None. Justification: Highlights infrastructure health and trends.
-    - IDOT Vocabulary Section:
-        - 30-Day Vocabulary: Text + Interactive cards. Goal: Learn/review terms. Viz: Interactive cards. Interaction: Sidebar navigation, search, card click-to-reveal. Justification: Engaging for daily study and quick reference.
-    - General CE Vocabulary Section:
-        - 30-Day Vocabulary: Text + Interactive cards. Goal: Learn/review terms. Viz: Interactive cards. Interaction: Sidebar navigation, search, card click-to-reveal. Justification: Broadens general CE knowledge.
-    All charts use Chart.js with responsive containers and label wrapping logic. All visual elements are HTML/CSS/Canvas, no SVG. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -158,7 +144,6 @@
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
-    <!-- Main Navigation Bar -->
     <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
             <a href="#" class="text-2xl font-bold text-teal-700 mb-2 sm:mb-0">CE Learning Hub</a>
@@ -170,16 +155,13 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
     <main class="flex-1 container mx-auto px-4 py-8">
 
-        <!-- Civil Engineering Overview Section -->
         <section id="overview-section" class="mb-12 p-6 bg-white rounded-lg shadow-lg">
             <h2 class="text-3xl font-bold text-teal-700 mb-4 border-b-2 border-teal-200 pb-2">Overview of Civil Engineering</h2>
             <p class="text-lg text-stone-700 mb-4">Civil Engineering is a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment, including public works such as roads, bridges, canals, dams, airports, sewerage systems, pipelines, structural components of buildings, and railways. It is one of the oldest engineering disciplines, extending back to when the first human built a shelter or a bridge.</p>
             <p class="text-lg text-stone-700">This section provides a general introduction to the field, highlighting its significance in shaping our world. You'll learn about its historical roots and its crucial role in modern society, from ensuring safe drinking water to enabling efficient transportation networks. Explore the various sections of this application to delve deeper into specific areas of civil engineering.</p>
 
-            <!-- Disciplines Sub-Section -->
             <div id="disciplines" class="mb-12 p-6 bg-white rounded-lg shadow-lg">
                 <h2 class="text-3xl font-bold text-teal-700 mb-4 border-b-2 border-teal-200 pb-2">Key Disciplines of Civil Engineering</h2>
                 <p class="text-lg text-stone-700 mb-6">Civil engineering encompasses a wide array of specialized disciplines, each contributing to the built environment. This section allows you to explore six major branches, understanding their focus and seeing a relevant data visualization. Click on each tab to discover the unique contributions and challenges within each discipline.</p>
@@ -194,17 +176,14 @@
                 </div>
 
                 <div id="discipline-content">
-                    <!-- Content will be loaded here by JS -->
-                </div>
+                    </div>
             </div>
 
-            <!-- Project Lifecycle Sub-Section -->
             <div id="lifecycle" class="mb-12 p-6 bg-white rounded-lg shadow-lg">
                 <h2 class="text-3xl font-bold text-teal-700 mb-4 border-b-2 border-teal-200 pb-2">Civil Engineering Project Lifecycle</h2>
                 <p class="text-lg text-stone-700 mb-6">Every civil engineering project, regardless of its scale, follows a structured lifecycle to ensure successful completion. This section illustrates the typical phases of a project, from initial concept to ongoing operation. Click on each step in the flowchart to reveal a brief description of the activities involved in that phase, helping you understand the progression of a project.</p>
 
                 <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-                    <!-- Phase 1 -->
                     <div class="flowchart-step w-full" data-step="planning">
                         <h3 class="font-bold text-xl text-teal-800">1. Planning & Feasibility</h3>
                         <div class="flowchart-step-details">
@@ -216,7 +195,6 @@
                         <div class="flowchart-arrow vertical absolute top-full left-1/2 -translate-x-1/2"></div>
                     </div>
 
-                    <!-- Phase 2 -->
                     <div class="flowchart-step w-full" data-step="design">
                         <h3 class="font-bold text-xl text-teal-800">2. Design & Engineering</h3>
                         <div class="flowchart-step-details">
@@ -228,7 +206,6 @@
                         <div class="flowchart-arrow vertical absolute top-full left-1/2 -translate-x-1/2"></div>
                     </div>
 
-                    <!-- Phase 3 -->
                     <div class="flowchart-step w-full" data-step="procurement">
                         <h3 class="font-bold text-xl text-teal-800">3. Procurement & Bidding</h3>
                         <div class="flowchart-step-details">
@@ -240,7 +217,6 @@
                         <div class="flowchart-arrow vertical absolute top-full left-1/2 -translate-x-1/2"></div>
                     </div>
 
-                    <!-- Phase 4 (Starts new row on MD+) -->
                     <div class="flowchart-step w-full md:col-start-2" data-step="construction">
                         <h3 class="font-bold text-xl text-teal-800">4. Construction</h3>
                         <div class="flowchart-step-details">
@@ -252,7 +228,6 @@
                         <div class="flowchart-arrow vertical absolute top-full left-1/2 -translate-x-1/2"></div>
                     </div>
 
-                    <!-- Phase 5 -->
                     <div class="flowchart-step w-full" data-step="operations">
                         <h3 class="font-bold text-xl text-teal-800">5. Operations & Maintenance</h3>
                         <div class="flowchart-step-details">
@@ -262,7 +237,6 @@
                 </div>
             </div>
 
-            <!-- Infrastructure Stats Sub-Section -->
             <div id="stats" class="mb-12 p-6 bg-white rounded-lg shadow-lg">
                 <h2 class="text-3xl font-bold text-teal-700 mb-4 border-b-2 border-teal-200 pb-2">Key Infrastructure Statistics</h2>
                 <p class="text-lg text-stone-700 mb-6">Civil engineering is vital for maintaining and improving our nation's infrastructure. These charts present hypothetical statistics reflecting the current state and challenges in key infrastructure sectors. While the data is illustrative, it highlights the ongoing need for civil engineering expertise and investment.</p>
@@ -299,24 +273,19 @@
             </div>
         </section>
 
-        <!-- IDOT Vocabulary Section -->
         <section id="idot-vocab-section" class="hidden flex flex-col lg:flex-row min-h-[calc(100vh-100px)]">
-            <!-- Sidebar Navigation -->
             <aside id="idot-sidebar" class="bg-stone-200 text-stone-700 w-full lg:w-80 p-4 lg:h-full lg:sticky lg:top-0 overflow-y-auto shrink-0 rounded-lg shadow-md mb-4 lg:mb-0">
                 <h2 class="text-2xl font-bold text-stone-900 mb-4">IDOT Daily Topics</h2>
                 <div id="idot-sidebar-nav" class="space-y-2">
-                    <!-- Navigation items will be injected by JavaScript -->
-                </div>
+                    </div>
             </aside>
 
-            <!-- Content Display -->
             <div class="flex-1 p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-lg lg:ml-4">
                 <header class="mb-6">
                     <h1 class="text-4xl font-extrabold text-stone-900 mb-2">IDOT Vocabulary Guide</h1>
                     <p class="text-lg text-stone-600">This guide focuses on terminology relevant to the Illinois Department of Transportation. Select a topic from the sidebar to view the vocabulary for that day. Click on any card to reveal its definition, Vietnamese translation, and a real-world example. Use the search bar to find terms across all topics.</p>
                 </header>
                 
-                <!-- Search Bar -->
                 <div class="mb-6">
                     <input type="text" id="idotSearchInput" placeholder="Search for a term..." class="w-full p-3 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
                 </div>
@@ -324,8 +293,7 @@
                 <div>
                     <h2 id="idot-content-title" class="text-3xl font-bold text-teal-700 mb-4 border-b-2 border-teal-200 pb-2"></h2>
                     <div id="idot-content-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                        <!-- Vocabulary cards will be injected by JavaScript -->
-                    </div>
+                        </div>
                     <div id="idot-no-results" class="hidden text-center py-10">
                         <p class="text-xl text-stone-500">No matching terms found.</p>
                     </div>
@@ -333,24 +301,19 @@
             </div>
         </section>
 
-        <!-- General CE Vocabulary Section -->
         <section id="general-vocab-section" class="hidden flex flex-col lg:flex-row min-h-[calc(100vh-100px)]">
-            <!-- Sidebar Navigation -->
             <aside id="general-sidebar" class="bg-stone-200 text-stone-700 w-full lg:w-80 p-4 lg:h-full lg:sticky lg:top-0 overflow-y-auto shrink-0 rounded-lg shadow-md mb-4 lg:mb-0">
                 <h2 class="text-2xl font-bold text-stone-900 mb-4">General CE Daily Topics</h2>
                 <div id="general-sidebar-nav" class="space-y-2">
-                    <!-- Navigation items will be injected by JavaScript -->
-                </div>
+                    </div>
             </aside>
 
-            <!-- Content Display -->
             <div class="flex-1 p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-lg lg:ml-4">
                 <header class="mb-6">
                     <h1 class="text-4xl font-extrabold text-stone-900 mb-2">General Civil Engineering Vocabulary Guide</h1>
                     <p class="text-lg text-stone-600">This guide covers a broad range of general Civil Engineering terms. Select a topic from the sidebar to view the vocabulary for that day. Click on any card to reveal its definition, Vietnamese translation, and a real-world example. Use the search bar to find terms across all topics.</p>
                 </header>
                 
-                <!-- Search Bar -->
                 <div class="mb-6">
                     <input type="text" id="generalSearchInput" placeholder="Search for a term..." class="w-full p-3 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
                 </div>
@@ -358,8 +321,7 @@
                 <div>
                     <h2 id="general-content-title" class="text-3xl font-bold text-teal-700 mb-4 border-b-2 border-teal-200 pb-2"></h2>
                     <div id="general-content-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                        <!-- Vocabulary cards will be injected by JavaScript -->
-                    </div>
+                        </div>
                     <div id="general-no-results" class="hidden text-center py-10">
                         <p class="text-xl text-stone-500">No matching terms found.</p>
                     </div>
@@ -416,7 +378,7 @@
                 },
                 chartType: 'bar'
             },
-            water_resources: {
+            'water-resources': {
                 description: "Water resources engineering focuses on the management of water quality and quantity. This includes the design of water supply systems, drainage, irrigation, flood control, and wastewater treatment facilities.",
                 chartData: {
                     labels: ['Agriculture', 'Industrial', 'Municipal', 'Power Generation'],
@@ -444,7 +406,7 @@
                 },
                 chartType: 'bar'
             },
-            construction_management: {
+            'construction-management': {
                 description: "Construction management involves overseeing the planning, coordination, and control of a construction project from beginning to completion. It aims to deliver projects on time, within budget, and to the required quality standards.",
                 chartData: {
                     labels: ['Planning', 'Design', 'Procurement', 'Construction', 'Closeout'],
@@ -503,7 +465,6 @@
                 }]
             }
         };
-
         // IDOT Vocabulary Data
         const idotVocabularyData = [
             { day: 1, topic: "Highway Project Lifecycle", word: "Project Scoping", definition: "The process of defining the project's objectives, deliverables, and boundaries.", vietnamese: "Xác định phạm vi dự án", example: "The initial phase of the highway expansion involved extensive project scoping." },
@@ -1170,7 +1131,7 @@
             { day: 30, topic: "Engineering Economics", word: "Capital Cost", definition: "The initial expenses incurred to acquire or build a project or asset.", vietnamese: "Chi phí vốn (đầu tư ban đầu)", example: "The high capital cost of the new infrastructure project required significant financing." }
         ];
 
-        let chartInstances = {}; // To store all Chart.js instances for proper destruction
+         let chartInstances = {}; // To store all Chart.js instances for proper destruction
         let currentVocabType = 'idot'; // Tracks which vocabulary section is active
 
         // Function to wrap long labels for Chart.js
@@ -1252,8 +1213,6 @@
 
         // --- OVERVIEW SECTION LOGIC ---
 
-        let currentDisciplineChart = null; // To manage the active discipline chart
-
         // Handle discipline tab clicks
         document.querySelectorAll('.discipline-tab-button').forEach(button => {
             button.addEventListener('click', (e) => {
@@ -1268,10 +1227,14 @@
             if (!data) return;
 
             // Update active tab button
-            document.querySelectorAll('.tab-button').forEach(btn => {
-                btn.classList.remove('tab-button-active');
+            document.querySelectorAll('.discipline-tab-button').forEach(btn => {
+                btn.classList.remove('discipline-tab-button-active');
             });
-            document.querySelector(`.tab-button[data-discipline='${discipline}']`).classList.add('tab-button-active');
+            const activeButton = document.querySelector(`.discipline-tab-button[data-discipline='${discipline}']`);
+            if (activeButton) {
+                activeButton.classList.add('discipline-tab-button-active');
+            }
+
 
             // Render content (description and chart)
             const disciplineContentDiv = document.getElementById('discipline-content');
@@ -1300,30 +1263,170 @@
             renderChart('waterAgeChart', 'bar', infrastructureStatsData.waterAge);
             renderChart('transitRidershipChart', 'line', infrastructureStatsData.transitRidership);
         }
-
-        // Initial load logic
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set initial active navigation link and section (Overview)
-            document.getElementById('overview').classList.remove('hidden');
-            document.querySelector('.nav-link[data-section="overview"]').classList.add('nav-link-active');
+        
+        // --- VOCABULARY SECTION LOGIC ---
+        
+        function populateSidebar(vocabType, data) {
+            const sidebarNav = document.getElementById(`${vocabType}-sidebar-nav`);
+            if (!sidebarNav) return;
+            const topics = [...new Map(data.map(item => [item.topic, item])).values()];
+            sidebarNav.innerHTML = topics.map(item => `
+                <button class="w-full text-left px-3 py-2 rounded-md hover:bg-stone-300 transition vocab-sidebar-item" data-topic="${item.topic}">
+                    Day ${item.day}: ${item.topic}
+                </button>
+            `).join('');
+        }
+        
+        function displayVocabContent(vocabType, data, topic) {
+            const contentGrid = document.getElementById(`${vocabType}-content-grid`);
+            const contentTitle = document.getElementById(`${vocabType}-content-title`);
+            const noResultsDiv = document.getElementById(`${vocabType}-no-results`);
             
-            // Load initial discipline content (e.g., Structural)
-            loadDiscipline('structural');
+            if (!contentGrid || !contentTitle || !noResultsDiv) return;
 
-            // Render initial stats charts (they will be hidden, but ready to display)
+            const items = data.filter(item => item.topic === topic);
+            
+            if (items.length > 0) {
+                contentTitle.textContent = topic;
+                contentGrid.innerHTML = items.map(item => `
+                    <div class="vocab-card" tabindex="0">
+                        <h3 class="text-xl font-bold text-stone-800">${item.word}</h3>
+                        <div class="vocab-card-details mt-2 pt-2 border-t border-stone-200">
+                            <p class="text-stone-700"><strong>Definition:</strong> ${item.definition}</p>
+                            <p class="text-stone-600 mt-1"><strong>Vietnamese:</strong> ${item.vietnamese}</p>
+                            <p class="text-stone-600 mt-1"><strong>Example:</strong> <em>${item.example}</em></p>
+                        </div>
+                    </div>
+                `).join('');
+                contentGrid.classList.remove('hidden');
+                noResultsDiv.classList.add('hidden');
+
+                // Add click listeners to new cards
+                contentGrid.querySelectorAll('.vocab-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        card.classList.toggle('is-open');
+                    });
+                });
+            }
+        }
+        
+        function setupVocabularySection(vocabType, data) {
+            populateSidebar(vocabType, data);
+            
+            const sidebarNav = document.getElementById(`${vocabType}-sidebar-nav`);
+            const searchInput = document.getElementById(`${vocabType}SearchInput`);
+            const contentGrid = document.getElementById(`${vocabType}-content-grid`);
+            const contentTitle = document.getElementById(`${vocabType}-content-title`);
+            const noResultsDiv = document.getElementById(`${vocabType}-no-results`);
+
+            // Handle sidebar clicks
+            if (sidebarNav) {
+                sidebarNav.addEventListener('click', (e) => {
+                    if (e.target.matches('.vocab-sidebar-item')) {
+                        const topic = e.target.dataset.topic;
+                        displayVocabContent(vocabType, data, topic);
+                        
+                        document.querySelectorAll(`#${vocabType}-sidebar .vocab-sidebar-item`).forEach(btn => btn.classList.remove('vocab-sidebar-item-active'));
+                        e.target.classList.add('vocab-sidebar-item-active');
+                    }
+                });
+            }
+
+            // Handle search input
+             if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+                    const filteredItems = data.filter(item => 
+                        item.word.toLowerCase().includes(searchTerm) || 
+                        item.definition.toLowerCase().includes(searchTerm) ||
+                        item.vietnamese.toLowerCase().includes(searchTerm)
+                    );
+
+                    if (filteredItems.length > 0) {
+                        contentTitle.textContent = `Search Results for "${searchTerm}"`;
+                        contentGrid.innerHTML = filteredItems.map(item => `
+                            <div class="vocab-card" tabindex="0">
+                                <h3 class="text-xl font-bold text-stone-800">${item.word}</h3>
+                                <div class="vocab-card-details mt-2 pt-2 border-t border-stone-200">
+                                    <p class="text-stone-700"><strong>Definition:</strong> ${item.definition}</p>
+                                    <p class="text-stone-600 mt-1"><strong>Vietnamese:</strong> ${item.vietnamese}</p>
+                                    <p class="text-stone-600 mt-1"><strong>Example:</strong> <em>${item.example}</em></p>
+                                </div>
+                            </div>
+                        `).join('');
+                        contentGrid.classList.remove('hidden');
+                        noResultsDiv.classList.add('hidden');
+                        
+                        contentGrid.querySelectorAll('.vocab-card').forEach(card => {
+                            card.addEventListener('click', () => card.classList.toggle('is-open'));
+                        });
+                    } else {
+                        contentTitle.textContent = `Search Results for "${searchTerm}"`;
+                        contentGrid.classList.add('hidden');
+                        noResultsDiv.classList.remove('hidden');
+                    }
+                });
+            }
+            
+            // Initial content load
+            const firstTopic = data.length > 0 ? data[0].topic : null;
+            if (firstTopic) {
+                displayVocabContent(vocabType, data, firstTopic);
+                const firstSidebarItem = document.querySelector(`#${vocabType}-sidebar .vocab-sidebar-item`);
+                if (firstSidebarItem) {
+                    firstSidebarItem.classList.add('vocab-sidebar-item-active');
+                }
+            }
+        }
+
+
+        // --- MAIN INITIALIZATION LOGIC ---
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.main-nav-link');
+            const sections = document.querySelectorAll('main > section');
+
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(navLink => navLink.classList.remove('main-nav-link-active'));
+                    link.classList.add('main-nav-link-active');
+
+                    const sectionId = link.getAttribute('data-section');
+                    showSection(sectionId);
+                });
+            });
+
+            // Set initial state
+            const initialSectionId = 'overview-section';
+            showSection(initialSectionId);
+            document.querySelector(`.main-nav-link[data-section="${initialSectionId}"]`).classList.add('main-nav-link-active');
+
+            // Initialize Overview Section
+            loadDiscipline('structural');
             renderChartsForStats();
+            
+            // Initialize Vocabulary Sections
+            setupVocabularySection('idot', idotVocabularyData);
+            setupVocabularySection('general', generalVocabularyData);
         });
 
-        // Re-render charts on window resize to ensure responsiveness
+        // Re-render charts on window resize
         window.addEventListener('resize', () => {
-            // Only re-render if the section is visible
-            if (!document.getElementById('disciplines').classList.contains('hidden')) {
-                const activeDisciplineTab = document.querySelector('.tab-button-active');
+            if (!document.getElementById('overview-section').classList.contains('hidden')) {
+                const activeDisciplineTab = document.querySelector('.discipline-tab-button-active');
                 if (activeDisciplineTab) {
                     loadDiscipline(activeDisciplineTab.dataset.discipline);
                 }
-            }
-            if (!document.getElementById('stats').classList.contains('hidden')) {
                 renderChartsForStats();
             }
         });
